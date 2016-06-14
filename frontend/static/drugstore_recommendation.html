@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://localhost:3000/drugstore_recommendation -->
+<html lang="en" class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <!-- Meta, title, CSS, favicons, etc. -->
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>医疗健康服务应用系统</title>
+
+  <!-- Bootstrap core CSS -->
+
+  <link href="./drugstore_recommendation_files/bootstrap.min.css" rel="stylesheet">
+
+  <link href="./drugstore_recommendation_files/font-awesome.min.css" rel="stylesheet">
+  <link href="./drugstore_recommendation_files/animate.min.css" rel="stylesheet">
+
+  <!-- Custom styling plus plugins -->
+  <link href="./drugstore_recommendation_files/custom.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./drugstore_recommendation_files/jquery-jvectormap-2.0.3.css">
+  <link href="./drugstore_recommendation_files/green.css" rel="stylesheet">
+  <link href="./drugstore_recommendation_files/floatexamples.css" rel="stylesheet" type="text/css">
+
+  <script src="./drugstore_recommendation_files/jquery.min.js"></script><style type="text/css"></style>
+  <script src="./drugstore_recommendation_files/nprogress.js"></script>
+
+  <!--[if lt IE 9]>
+        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+        <![endif]-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+
+<body class="nav-md">
+
+  <div class="container body">
+
+
+    <div class="main_container">
+
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view" tabindex="5000" style="overflow: hidden; outline: none; cursor: -webkit-grab;">
+
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="http://localhost:3000/index.html" class="site_title"><span>大数据医疗健康服务</span></a>
+          </div>
+          <div class="clearfix"></div>
+
+          <!-- menu prile quick info -->
+          <div class="profile">
+            <div class="profile_pic">
+              <img src="./drugstore_recommendation_files/img.jpg" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>No. 28370</span>
+              <h2>王小明</h2>
+            </div>
+          </div>
+          <!-- /menu prile quick info -->
+
+          <br>
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+            <div class="menu_section">
+              <h3>疾病诊疗服务系统</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i>个人信息<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none;">
+                    <li><a href="http://localhost:3000/index">我的信息</a>
+                    </li>
+                    <li><a href="http://localhost:3000/medical_record">医疗档案</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="active"><a><i class="fa fa-medkit"></i>在线诊病<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="http://localhost:3000/disease_diagnosis">疾病诊断</a>
+                    </li>
+                    <li><a href="http://localhost:3000/hospital_recommendation">就诊医院推荐</a>
+                    </li>
+                    <li><a href="http://localhost:3000/recipe_details">查询处方详情</a>
+                    </li>
+                    <li class="current-page"><a href="http://localhost:3000/drugstore_recommendation">药店推荐</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-desktop"></i>个性化服务<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none;">
+                    <li><a href="http://localhost:3000/others_physical_status">他人身体信息</a>
+                    </li>
+                    <li><a href="http://localhost:3000/precaution_caution">疾病预防提醒</a>
+                    </li>
+                    <li><a href="http://localhost:3000/maintenance_advice">“保养”建议</a>
+                    </li>
+                    <li><a href="http://localhost:3000/drug_reminder">用药提醒</a>
+                    </li>
+                    <li><a href="http://localhost:3000/rescue">突发病情紧急求助</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+
+        <div class="nav_menu">
+          <nav class="" role="navigation">
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <img src="./drugstore_recommendation_files/img.jpg" alt="">王小明
+                  <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+                  <li><a href="javascript:;">  Profile</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="badge bg-red pull-right">50%</span>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">Help</a>
+                  </li>
+                  <li><a href="http://localhost:3000/login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li role="presentation" class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="badge bg-green">6</span>
+                </a>
+                <ul id="menu1" class="dropdown-menu list-unstyled msg_list animated fadeInDown" role="menu">
+                  <li>
+                    <a>
+                      <span class="image">
+                                        <img src="./drugstore_recommendation_files/img.jpg" alt="Profile Image">
+                                    </span>
+                      <span>
+                                        <span>John Smith</span>
+                      <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span class="image">
+                                        <img src="./drugstore_recommendation_files/img.jpg" alt="Profile Image">
+                                    </span>
+                      <span>
+                                        <span>John Smith</span>
+                      <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span class="image">
+                                        <img src="./drugstore_recommendation_files/img.jpg" alt="Profile Image">
+                                    </span>
+                      <span>
+                                        <span>John Smith</span>
+                      <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span class="image">
+                                        <img src="./drugstore_recommendation_files/img.jpg" alt="Profile Image">
+                                    </span>
+                      <span>
+                                        <span>John Smith</span>
+                      <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="text-center">
+                      <a href="http://localhost:3000/inbox.html">
+                        <strong>See All Alerts</strong>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+      <!-- /top navigation -->
+
+
+      <!-- page content -->
+      <div class="right_col" role="main" style="min-height: 781px;">
+        <div class="paga-title">
+    <div class="title_left">
+        <h3 style="font-family: &quot;Helvetica Neue&quot;, Roboto, Arial, 微软雅黑">药店推荐</h3>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="col-xs-4">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="请输入药品名" value="阿莫西林胶囊">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-primary">查询</button>
+            </span>
+        
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2><i class="fa fa-align-left"></i> 附近的药店如下 <small>您在 哈尔滨工业大学-软件学院 附近</small> </h2>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="x_content">
+
+            <!-- start accordion -->
+            <div class="accordion" id="accordion1" role="tablist" aria-multiselectable="true">
+                
+                    
+                        <div class="panel">
+                            <a class="panel-heading" role="tab" id="heading11" data-toggle="collapse" data-parent="#accordion1" href="http://localhost:3000/drugstore_recommendation#collapse11" aria-expanded="true" aria-controls="collapse1">
+                                <h4 class="panel-title"> 龙卫中新医药(御药堂药店)&nbsp;&nbsp;药品有库存&nbsp;&nbsp;价格：<span style="color: #e00000">17.50</span> 元&nbsp;&nbsp;推荐指数：10</h4>
+                            </a>
+                            <div id="collapse11" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body">
+                                    <img src="./drugstore_recommendation_files/phar1.png" class="col-xs-6">
+                                    <div class="col-xs-4">
+                                        <p>营业时间：</p>
+                                        
+                                        <p>&nbsp;&nbsp;周一到周五：上午八时到下午八时</p>
+                                        
+                                        <p>&nbsp;&nbsp;周六到周日：上午九时到下午六时</p>
+                                        
+                                        <br>
+                                        <p>路线指导：</p>
+                                        
+                                        <p>&nbsp;&nbsp;从起点向东南方向出发，沿教化街走370米，左转过人行通道，继续向前进入繁盛街</p>
+                                        
+                                        <p>&nbsp;&nbsp;沿繁盛街走30米，到达终点</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+                    
+                        <div class="panel">
+                            <a class="panel-heading collapsed" role="tab" id="heading21" data-toggle="collapse" data-parent="#accordion1" href="http://localhost:3000/drugstore_recommendation#collapse21" aria-expanded="false" aria-controls="collapse2">
+                                <h4 class="panel-title"> 金天爱心药房&nbsp;&nbsp;药品有库存&nbsp;&nbsp;价格：<span style="color: #e00000">21.70</span> 元&nbsp;&nbsp;推荐指数：9 </h4>
+                            </a>
+                            <div id="collapse21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                <div class="panel-body">
+                                    <img src="./drugstore_recommendation_files/phar2.png" class="col-xs-6">
+                                    <div class="col-xs-4">
+                                        <p>营业时间：</p>
+                                        
+                                            <p>&nbsp;&nbsp;周一到周五：上午九时到下午九时</p>
+                                        
+                                            <p>&nbsp;&nbsp;周六到周日：上午十时到下午七时</p>
+                                        
+                                        <br>
+                                        <p>路线指导：</p>
+                                        
+                                            <p>&nbsp;&nbsp;从起点向东南方向出发，沿教化街走370米，左转过人行道，继续向前进入繁盛街</p>
+                                        
+                                            <p>&nbsp;&nbsp;沿繁盛街走130米，到达终点</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+                    
+                        <div class="panel">
+                            <a class="panel-heading collapsed" role="tab" id="heading31" data-toggle="collapse" data-parent="#accordion1" href="http://localhost:3000/drugstore_recommendation#collapse31" aria-expanded="false" aria-controls="collapse3">
+                                <h4 class="panel-title"> 奇峰大药房&nbsp;&nbsp;药品有库存&nbsp;&nbsp;价格：<span style="color: #e00000">25.30</span> 元&nbsp;&nbsp;推荐指数：8 </h4>
+                            </a>
+                            <div id="collapse31" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                <div class="panel-body">
+                                    <img src="./drugstore_recommendation_files/phar3.png" class="col-xs-6">
+                                    <div class="col-xs-4">
+                                        <p>营业时间：</p>
+                                        
+                                            <p>&nbsp;&nbsp;周一到周五：上午七时到下午七时</p>
+                                        
+                                            <p>&nbsp;&nbsp;周六到周日：上午十二时到下午七时</p>
+                                        
+                                        <br>
+                                        <p>路线指导：</p>
+                                        
+                                            <p>&nbsp;&nbsp;从起点向东南方向出发，沿教化街走370米，左转，经人行道穿过马路并往回走</p>
+                                        
+                                            <p>&nbsp;&nbsp;继续沿教化街走200米，右转进入复华四道街</p>
+                                        
+                                            <p>&nbsp;&nbsp;沿复华四道街走70米，到达终点</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+            </div>
+            <!-- end of accordion -->
+
+        </div>
+    </div>
+</div>
+      </div>
+      <!-- /page content -->
+
+    </div>
+
+  </div>
+
+  <div id="custom_notifications" class="custom-notifications dsp_none">
+    <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+    </ul>
+    <div class="clearfix"></div>
+    <div id="notif-group" class="tabbed_notifications"></div>
+  </div>
+
+  <script src="./drugstore_recommendation_files/bootstrap.min.js"></script>
+
+  <!-- gauge js -->
+  <script type="text/javascript" src="./drugstore_recommendation_files/gauge.min.js"></script>
+  <script type="text/javascript" src="./drugstore_recommendation_files/gauge_demo.js"></script>
+  <!-- chart js -->
+  <script src="./drugstore_recommendation_files/chart.min.js"></script>
+  <!-- bootstrap progress js -->
+  <script src="./drugstore_recommendation_files/bootstrap-progressbar.min.js"></script>
+  <script src="./drugstore_recommendation_files/jquery.nicescroll.min.js"></script>
+  <!-- icheck -->
+  <script src="./drugstore_recommendation_files/icheck.min.js"></script>
+  <!-- daterangepicker -->
+  <script type="text/javascript" src="./drugstore_recommendation_files/moment.min.js"></script>
+  <script type="text/javascript" src="./drugstore_recommendation_files/daterangepicker.js"></script>
+
+  <script src="./drugstore_recommendation_files/custom.js"></script>
+
+
+
+
+<div id="ascrail2000" class="nicescroll-rails" style="width: 5px; z-index: auto; cursor: -webkit-grab; position: absolute; top: 0px; left: 225px; height: 334px; display: none; opacity: 1;"><div style="position: relative; top: 0px; float: right; width: 5px; height: 0px; border: 0px solid rgb(255, 255, 255); border-radius: 5px; background-color: rgba(42, 63, 84, 0.34902); background-clip: padding-box;"></div></div><div id="ascrail2000-hr" class="nicescroll-rails" style="height: 5px; z-index: auto; top: 329px; left: 0px; position: absolute; display: none; opacity: 1;"><div style="position: relative; top: 0px; height: 5px; width: 0px; border: 0px solid rgb(255, 255, 255); border-radius: 5px; left: 0px; background-color: rgba(42, 63, 84, 0.34902); background-clip: padding-box;"></div></div></body></html>
