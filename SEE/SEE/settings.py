@@ -56,7 +56,7 @@ ROOT_URLCONF = 'SEE.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['../../frontend'],
+        'DIRS': [os.path.join(os.path.dirname(__file__),'../templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,5 +122,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '../../frontend/static/',
+    '../static/',
 ]
