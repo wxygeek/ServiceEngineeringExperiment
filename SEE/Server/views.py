@@ -36,13 +36,30 @@ def logout(request):
     return HttpResponseRedirect('/')
 
 def registerDoctor(dict_info):
-    if dict_info.get('name') and dict_info.get('pwd'):
-        doctor = models.Doctor()
-
+    username = dict_info.get('username')
+    password = dict_info.get('password')
+    if username and password:
+        try:
+            user = User.object.create_user(username,'tmp@tmp.com',password)
+            doctor = models.Doctor(user = user)
+            doctor.save()
+            return True
+        except Exception as e:
+            # raise
+            return False
 
 def registerPaitent(dict_info):
-    if dict_info.get('name') and dict_info.get('pwd'):
-        patient = models.Patient()
+    username = dict_info.get('username')
+    password = dict_info.get('password')
+    if username and password:
+        try:
+            user = User.object.create_user(username,'tmp@tmp.com',password)
+            patient = models.Patient(user = user)
+            patient.save()
+            return True
+        except Exception as e:
+            raise
+            return False
 
 def register(request):
     person_clas = request.POST['clas']
@@ -72,12 +89,28 @@ def UserInfo(request):
     elif request.GET:
         persion_clas = request.GET.get('clas')
 
+import key_generator
+def getkey(request):
+    return HttpResponse(json.dumps(key_generator.generate()), content_type='application/json')
+
+import schema
+def schema(request):
+    if request.POST:
+        schema.store(request.POST['schema'])
+    elif request.GET:
+        return HttpResponse(schema.get(request.GET.get('id')), content_type='application/json')
+
+def schema_list(request):
+    if request.GET :
+        return HttpResponse(json.dumps(chema.getSchemaIdList()), content_type='application/json')
+
+
 from rest_framework import viewsets
 from serializers import DoctorSer , PatientSer
 class DoctorViewSet(viewsets.ModelViewSet):
-    query_set = models.Doctor.objects.all().order_by('username')
+    queryset = models.Doctor.objects.all().order_by('username')
     serializer_class = DoctorSer
 
 class PatientViewSet(viewsets.ModelViewSet):
-    query_set = models.Patient.objects.all()
+    queryset = models.Patient.objects.all()
     serializer_class = PatientSer
