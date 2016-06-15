@@ -70,8 +70,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'SEE.wsgi.application'
-
-
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
@@ -124,3 +122,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '../static/',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASS': ('rest_framework.permissions.IsAdminUser',),
+    'PAGE_SIZE':10
+}

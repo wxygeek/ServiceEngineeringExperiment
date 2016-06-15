@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_URL}),
     url(r'^', include(server_urls)),
+    url(r'^api_auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
